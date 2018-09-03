@@ -212,8 +212,7 @@ h3 {
 }
 
 .card2 {
-  background-image: url("img/GuiltyShoes.jpg");
-  background-size: cover;
+  background: url("GuiltyShoes.jpg");
 }
 
 .card3 {
@@ -222,7 +221,7 @@ h3 {
 }
 
 .card4 {
-  background: url("img/BeingHuman.jpg") no-repeat center center;
+  background-image: url("BeingHuman.jpg");
   background-size: cover;
 }
 
