@@ -1,116 +1,267 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	color: whitesmoke;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: whitesmoke;
+  vertical-align: baseline;
 }
 
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
-	background: black;
+  line-height: 1;
+  background: black;
+  font-family: "Markazi Text", serif;
 }
-ol, ul {
-	list-style: none;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
-blockquote, q {
-	quotes: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-a{
-	text-decoration: none;
+a {
+  font-size: 25px;
+  text-decoration: none;
 }
 
-.container{
-	margin: 0 auto;
-	width: 1000px;
+a:hover {
+  color: red;
 }
 
-.four-film-flex{
-	margin: 20px 0;
-	display: flex;
-	flex-direction: column;
-	height: 900px;
+h2 {
+  font-size: 30px;
 }
 
-.two-film-flex{
-	display: flex;
-	flex: 10;
-	overflow: hidden;
+h3 {
+  font-size: 60px;
 }
 
-.center-text{
-	flex:1;
-	transition:
-	flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-	background 0.2s;
+.container {
+  margin: 0 auto;
+  width: 1000px;
 }
 
-.center-text:hover{
-	flex: 2;
+.four-film-flex {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
 }
 
-.film-card{
-	flex: 1;
-	transition:
-		flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-		background 0.2s;
-	border: red solid 1px;
+.two-film-flex {
+  display: flex;
+  flex: 10;
+  overflow: hidden;
 }
 
-.film-card:hover{
-	flex: 3;
+.center-text {
+  flex: 1;
+  transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
 }
 
-.card1{
-	background-image: url("img/IThoughtYoudBeGone.jpg") ;
-	background-size: cover;
+.center-text .hidden-row {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
 }
 
-.card2{
-	background: url("img/Guiltyshoes.jpg") no-repeat center center;
-	background-size: cover;
+.center-text:hover {
+  flex: 2;
 }
 
-.card3{
-	background: url("img/WereAllZombies.jpg") no-repeat center center;
-	background-size: cover;
+.film-card {
+  flex: 1;
+  transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  border: red solid 1px;
+  overflow: hidden;
 }
 
-.card4{
-	background: url("img/BeingHuman.jpg") no-repeat center center;
-	background-size: cover;
+.film-card:hover {
+  flex: 3;
+}
+
+.card1 {
+  background-image: url("img/IThoughtYoudBeGone.jpg");
+  background-size: cover;
+}
+
+.card2 {
+  background-image: url("img/GuiltyShoes.jpg");
+  background-size: cover;
+}
+
+.card3 {
+  background: url("img/WereAllZombies.jpg");
+  background-size: cover;
+}
+
+.card4 {
+  background: url("img/BeingHuman.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.four-film-flex .film-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.four-film-flex .two-film-flex .card1 a,
+.four-film-flex .card3 a {
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.four-film-flex .card1:hover > a,
+.four-film-flex .card3:hover > a {
+  align-items: flex-start;
+  opacity: 1;
+  transform: translateX(5%);
+  transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    opacity 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+.four-film-flex .card2 a,
+.four-film-flex .card4 a {
+  align-items: flex-end;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.four-film-flex .card2:hover > a,
+.four-film-flex .card4:hover > a {
+  align-items: flex-end;
+  opacity: 1;
+  transform: translateX(-5%);
+  transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    opacity 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
 }
