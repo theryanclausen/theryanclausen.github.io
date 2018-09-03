@@ -155,7 +155,7 @@ h2 {
 }
 
 h3 {
-  font-size: 60px;
+  font-size: 36px;
 }
 
 .container {
@@ -198,31 +198,36 @@ h3 {
 .film-card {
   flex: 1;
   transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-  border: red solid 1px;
   overflow: hidden;
+  position: relative;
+  -moz-box-shadow:    inset 60px 30px 110px black;
+  -webkit-box-shadow: inset 60px 30px 110px black;
+  box-shadow:         inset 60px 30px 110px black;
 }
+
+.four-film-flex .card2,
+.four-film-flex .card4 {
+  right: 0px;
+  -moz-box-shadow:    inset -110px 50px 110px black;
+  -webkit-box-shadow: inset -110px 50px 110px black;
+  box-shadow:         inset -110px 50px 110px black;
+}
+
 
 .film-card:hover {
   flex: 3;
 }
 
-.card1 {
-  background-image: url("img/IThoughtYoudBeGone.jpg");
-  background-size: cover;
+.four-film-flex .film-card img {
+  z-index: -1;
+  position: absolute;
+  filter: grayscale(100%);
+  transition: filter 0.7s;
 }
 
-.card2 {
-  background: url("GuiltyShoes.jpg");
-}
-
-.card3 {
-  background: url("img/WereAllZombies.jpg");
-  background-size: cover;
-}
-
-.card4 {
-  background-image: url("BeingHuman.jpg");
-  background-size: cover;
+.four-film-flex .film-card:hover > img {
+  filter: grayscale(0);
+  transition: filter 0.7s;
 }
 
 .four-film-flex .film-card a {
@@ -263,4 +268,9 @@ h3 {
   transform: translateX(-5%);
   transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     opacity 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+.four-film-flex .card2 img,
+.four-film-flex .card4 img {
+  right: 0px;
 }
