@@ -150,6 +150,10 @@ a:hover {
   color: red;
 }
 
+h1{
+	font-size: 30px;
+}
+
 h2 {
   font-size: 30px;
 }
@@ -158,9 +162,20 @@ h3 {
   font-size: 36px;
 }
 
+h5{
+	font-size: 20px;
+	line-height: 0;
+}
+
 .container {
   margin: 0 auto;
   width: 1000px;
+}
+
+/*^^^^^^^^^Global^^^^^^^^^^^*/
+
+.index header{
+	display: none;
 }
 
 .four-film-flex {
@@ -189,6 +204,7 @@ h3 {
   display: flex;
   width: 25%;
   justify-content: space-between;
+  font-family: "Permanent Marker", cursive;
 }
 
 .center-text:hover {
@@ -250,8 +266,8 @@ h3 {
   align-items: flex-start;
   opacity: 1;
   transform: translateX(5%);
-  transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-    opacity 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+  transition: transform 0.5s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    opacity 1.5s;
 }
 
 .four-film-flex .card2 a,
@@ -259,6 +275,7 @@ h3 {
   align-items: flex-end;
   transform: translateX(100%);
   opacity: 0;
+
 }
 
 .four-film-flex .card2:hover > a,
@@ -266,11 +283,65 @@ h3 {
   align-items: flex-end;
   opacity: 1;
   transform: translateX(-5%);
-  transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-    opacity 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+  transition: transform 0.5s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    opacity 2s;
 }
 
 .four-film-flex .card2 img,
 .four-film-flex .card4 img {
   right: 0px;
+}
+
+/*^^^^^^^^Index^^^^^^^^^^^^*/
+
+header nav > *{
+	font-family: "Permanent Marker", cursive;
+	font-size: 16px;
+}
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 0;
+}
+header nav{
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	overflow: hidden;
+}
+
+header nav .dropdown .dropover{
+	position: relative;
+}
+
+header nav .dropdown .dropdown-content{
+	position: absolute;
+	display: none;
+}
+
+header nav .dropdown:hover > .dropdown-content{
+	display: flex;
+	flex-direction: column;
+}
+
+header nav .dropdown:hover > .dropover{
+	color: red;
+}
+
+/*^^^^^^^^Nav bar ^^^^^^^^^^^*/
+
+.embedded .theater{
+	display: flex;
+	margin-top: 75px;
+}
+
+.embedded .theater .synopsis{
+	width: 300px;
+	margin-left: 20px;
+}
+
+.embedded .theater .synopsis p{
+	font-size: 20px;
 }
