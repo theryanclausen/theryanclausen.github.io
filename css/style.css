@@ -163,20 +163,26 @@ h3 {
 }
 
 h5{
-	font-size: 20px;
-	line-height: 0;
+	font-size: 25px;
+	line-height: 1;
 }
+
 
 .container {
   margin: 0 auto;
   width: 1000px;
 }
 
-/*^^^^^^^^^Global^^^^^^^^^^^*/
-
-.index header{
+.container header{
 	display: none;
 }
+
+.synopsis p{
+  margin-bottom: 20px;
+}
+
+/*^^^^^^^^^Global^^^^^^^^^^^*/
+
 
 .four-film-flex {
   margin: 20px 0;
@@ -198,6 +204,10 @@ h5{
   flex-direction: column;
   overflow: hidden;
   align-items: center;
+}
+
+.center-text a:hover > *, .synopsis a:hover > * {
+  color: red;
 }
 
 .center-text .hidden-row {
@@ -331,10 +341,52 @@ header nav .dropdown:hover > .dropover{
 }
 
 /*^^^^^^^^Nav bar ^^^^^^^^^^^*/
+.embedded .two-film-flex{
+  flex:3;
+}
 
-.embedded .theater{
-	display: flex;
-	margin-top: 75px;
+.embedded .two-film-flex .film-card:hover{
+  flex: 1;
+  transform: initial;
+}
+
+.embedded .two-film-flex .film-card a{
+  transform: initial;
+  opacity: initial;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.embedded .two-film-flex .film-card a h3{
+  margin: 10px;
+}
+
+.embedded .card1 img{
+  top:-40px;
+}
+
+.embedded .card2 img{
+  top:-90px;
+}
+
+.embedded .card3 img{
+  top: -20px;
+  left: -180px;
+}
+
+.embedded .card4 img{
+  top: -30px;
+  right: -50px;
+}
+
+.embedded .theater, .embedded .about{
+  padding-top: 40px;
+  display: flex;
+  flex: 7;
+}
+
+.embedded .about{
+  justify-content: space-between;
 }
 
 .embedded .theater .synopsis{
@@ -342,6 +394,24 @@ header nav .dropdown:hover > .dropover{
 	margin-left: 20px;
 }
 
-.embedded .theater .synopsis p{
+.embedded .theater .synopsis p, .embedded .about .synopsis p{
 	font-size: 20px;
+}
+
+.embedded .about .synopsis{
+  margin-right: 20px;
+  width: 50%;
+}
+
+
+.embedded .about img{
+  width: 35%;
+  height: 85%;
+}
+
+
+.embedded .center-text{
+  margin: 0;
+  flex: 2;
+  transform: initial;
 }
